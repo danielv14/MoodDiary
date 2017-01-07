@@ -1,24 +1,4 @@
-# README
+# MoodDiary
+This is a very simple application built with Ruby on Rails where users can sign in / sign up to start tracking thair daily moods.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+MoodDiary was an attempt to build a simple but functionall application in just one day.
