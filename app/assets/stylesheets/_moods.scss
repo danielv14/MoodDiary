@@ -4,15 +4,12 @@
 .mood-radios {
   margin-bottom: 50px;
   label {
-    font-size: 100px;
+    font-size: 75px !important;
     transition: transform 250ms ease-in-out;
     padding: 25px;
   }
-  input[type="radio"] {
-    left: -999em;
-    position: absolute;
-  }
+
   input[type="radio"]:checked+label {
-    transform: scale(1.7);
+    transform: scale(1.3);
   }
 }

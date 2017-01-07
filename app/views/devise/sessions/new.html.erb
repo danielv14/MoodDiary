@@ -1,23 +1,24 @@
 <h2>Log in to MoodDiary</h2>
 <p>To use this application and to track your daily moods you need to be logged in</p>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
+  <div class="input-field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, class: "form-control" %>
+    <%= f.email_field :email, autofocus: true, class: "validate" %>
   </div>
 
-  <div class="field">
+  <div class="input-field">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+    <%= f.password_field :password, autocomplete: "off", class: "validate" %>
   </div>
 
   <% if devise_mapping.rememberable? -%>
-    <div class="field">
+    <div class="input-field">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
   <% end -%>
 
+  <br>
   <div class="actions">
     <%= f.submit "Log in", class: "btn btn-primary" %>
   </div>

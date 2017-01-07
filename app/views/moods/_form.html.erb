@@ -12,16 +12,16 @@
   <% end %>
 
   <div class="field mood-radios">
-    <%= f.radio_button(:mood, "love", required: "required") %>
+    <%= f.radio_button(:mood, "love", required: "required", class: "radio-btn") %>
     <%= f.label(:mood_love, Emoji.find_by_alias("heart_eyes").raw) %>
 
-    <%= f.radio_button(:mood, "happy", required: "required") %>
+    <%= f.radio_button(:mood, "happy", required: "required", class: "radio-btn") %>
     <%= f.label(:mood_happy, Emoji.find_by_alias("smile").raw) %>
 
-    <%= f.radio_button(:mood, "neutral", required: "required") %>
+    <%= f.radio_button(:mood, "neutral", required: "required", class: "radio-btn") %>
     <%= f.label(:mood_neutral, Emoji.find_by_alias("neutral_face").raw) %>
 
-    <%= f.radio_button(:mood, "sad", required: "required") %>
+    <%= f.radio_button(:mood, "sad", required: "required", class: "radio-btn") %>
     <%= f.label(:mood_sad, Emoji.find_by_alias("sob").raw) %>
   </div>
 
