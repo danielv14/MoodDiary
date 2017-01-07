@@ -3,5 +3,13 @@ class Mood < ApplicationRecord
 
   # Validation
   validates :mood, presence: true
-  validates :body, length: { in: 10..140 }
+
+  # scopes
+  scope :love,    -> { where(mood: "love") }
+  scope :happy,   -> { where(mood: "happy") }
+  scope :neutral, -> { where(mood: "neutral") }
+  scope :sad,     -> { where(mood: "sad") }
+
+
+
 end
