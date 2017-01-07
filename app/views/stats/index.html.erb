@@ -1,23 +1,27 @@
 <section class="stats text-center">
   <h1>Your mood stats</h1>
-
+  <h4>
+    Since <%= @first.created_at.strftime("%B %Y") %> when you started tracking your moods
+  </h4>
+  <hr>
+  <h4>You've had...</h4>
   <p>
-    You've had <%= @love.count %>
+    <%= @love.count %>
     <%= Emoji.find_by_alias("heart_eyes").raw %>
     <%= 'day'.pluralize(@love.count) %>
   </p>
   <p>
-    You've had <%= @happy.count %>
+    <%= @happy.count %>
     <%= Emoji.find_by_alias("smile").raw %>
     <%= 'day'.pluralize(@happy.count) %>
   </p>
   <p>
-    You've had <%= @neutral.count %>
+    <%= @neutral.count %>
     <%= Emoji.find_by_alias("neutral_face").raw %>
     <%= 'day'.pluralize(@neutral.count) %>
   </p>
   <p>
-    You've had <%= @sad.count %>
+    <%= @sad.count %>
     <%= Emoji.find_by_alias("sob").raw %>
     <%= 'day'.pluralize(@sad.count) %>
   </p>

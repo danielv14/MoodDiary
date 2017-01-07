@@ -7,6 +7,6 @@ class StatsController < ApplicationController
     @happy = current_user.moods.happy
     @neutral = current_user.moods.neutral
     @sad = current_user.moods.sad
-
+    @first = current_user.moods.first
   end
 end
