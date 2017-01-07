@@ -1,18 +1,22 @@
 <section class="center-align quota">
   <h1>Mood already set</h1>
-  <p>
-    You have already created a mood entry for today.
-    <br>
-    Pleace come back tomorrow to update your mood!
-  </p>
-
-  <hr>
 
   <p>
     Current mood for today is
     <%= render "partials/emoji" %>
   </p>
 
-  <%= link_to 'Update mood', edit_mood_path(@mood), class: 'btn btn-default btn-lg' %>
+  <hr>
 
+  <p>
+    You have already created a mood entry for today.
+    <br>
+    Pleace come back tomorrow to update your mood!
+  </p>
+
+  <div class="fixed-action-btn">
+    <%= link_to edit_mood_path(@mood), class: 'btn-large btn-floating red' do %>
+      <i class="large material-icons">mode_edit</i>
+    <% end %>
+  </div>
 </section>

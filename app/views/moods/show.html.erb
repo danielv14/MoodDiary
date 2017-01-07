@@ -5,6 +5,9 @@
     <%= render "partials/emoji" %>
   </p>
 
-
-  <%= link_to 'Edit', edit_mood_path(@mood), class: 'btn btn-primary btn-lg' %>
+  <div class="fixed-action-btn">
+    <%= link_to edit_mood_path(@mood), class: 'btn-large btn-floating red' do %>
+      <i class="large material-icons">mode_edit</i>
+    <% end %>
+  </div>
 </div>

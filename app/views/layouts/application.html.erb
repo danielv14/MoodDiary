@@ -4,6 +4,7 @@
     <title>MoodDiary</title>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -23,10 +24,32 @@
    <!-- end of flash messages -->
 
   <% if user_signed_in? %>
-    <div class="stats-wrapper">
-      <%= link_to 'Stats', stats_path, class: "btn btn-default btn-lg" %>
-      <%= link_to 'Home', new_mood_path, class: "btn btn-default btn-lg" %>
+  <nav>
+    <div class="nav-wrapper teal lighten-2">
+      <a href="#!" class="brand-logo">MoodDiary</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <%= link_to "Home", new_mood_path %>
+        </li>
+        <li>
+          <%= link_to "Stats", stats_path %>
+        </li>
+
+
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li>
+          <%= link_to "Home", new_mood_path %>
+        </li>
+        <li>
+          <%= link_to "Stats", stats_path %>
+        </li>
+
+      </ul>
     </div>
+  </nav>
+
   <% end %>
 
 
