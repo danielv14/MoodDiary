@@ -1,9 +1,16 @@
-<p id="notice"><%= notice %></p>
+<div class="text-center">
 
-<p>
-  <strong>Mood:</strong>
-  <%= @mood.mood %>
-</p>
+  <h1>Todays mood</h1>
+  <% if @mood.mood == 'love' %>
+    <p class="emoji"> <%= Emoji.find_by_alias("heart_eyes").raw %> </p>
+  <% elsif @mood.mood == 'happy' %>
+    <p class="emoji"> <%= Emoji.find_by_alias("smile").raw %> </p>
+  <% elsif @mood.mood == 'neutral' %>
+    <p class="emoji"> <%= Emoji.find_by_alias("neutral_face").raw %> </p>
+  <% else %>
+    <p class="emoji"> <%= Emoji.find_by_alias("sob").raw %> </p>
+  <% end %>
 
-<%= link_to 'Edit', edit_mood_path(@mood) %> |
-<%= link_to 'Back', moods_path %>
+
+  <%= link_to 'Edit', edit_mood_path(@mood), class: 'btn btn-primary btn-lg' %>
+</div>

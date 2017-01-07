@@ -10,9 +10,25 @@
 
   <body>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <!-- Display flash messages if any -->
+   <% if notice %>
+     <div id="notice-wrapper">
+       <p class="notice-text"><%= notice %></p>
+     </div>
+   <% elsif alert %>
+     <div id="notice-wrapper">
+       <p class="alert-text"><%= alert %></p>
+     </div>
+   <% end %>
+   <!-- end of flash messages -->
 
-    <%= yield %>
+  <div class="stats-wrapper">
+    <%= link_to 'Stats', stats_path, class: "btn btn-default btn-lg" %>
+  </div>
+
+   <div class="container">
+     <%= yield %>
+   </div>
+
   </body>
 </html>

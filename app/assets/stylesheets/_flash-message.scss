@@ -1,0 +1,22 @@
+/*
+* Style for ruby flash messages
+*/
+
+#notice-wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(pink, 0.85);
+}
+
+.notice-text, .alert-text {
+  padding: 2.5rem 0;
+  text-align: center;
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 2px;
+
+}

@@ -1,3 +1,18 @@
 // Place all the styles related to the moods controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.mood-radios {
+  margin-bottom: 50px;
+  label {
+    font-size: 100px;
+    transition: transform 250ms ease-in-out;
+    padding: 25px;
+  }
+  input[type="radio"] {
+    left: -999em;
+    position: absolute;
+  }
+  input[type="radio"]:checked+label {
+    transform: scale(1.7);
+  }
+}

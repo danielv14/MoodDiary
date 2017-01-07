@@ -11,21 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.radio_button(:mood, "love") %>
-    <%= f.label(:mood_love, "I can feel the love today") %>
+  <div class="field mood-radios">
+    <%= f.radio_button(:mood, "love", required: "required") %>
+    <%= f.label(:mood_love, Emoji.find_by_alias("heart_eyes").raw) %>
 
-    <%= f.radio_button(:mood, "happy") %>
-    <%= f.label(:mood_happy, "I am happy") %>
+    <%= f.radio_button(:mood, "happy", required: "required") %>
+    <%= f.label(:mood_happy, Emoji.find_by_alias("smile").raw) %>
 
-    <%= f.radio_button(:mood, "neutral") %>
-    <%= f.label(:mood_happy, "I am neutral today") %>
+    <%= f.radio_button(:mood, "neutral", required: "required") %>
+    <%= f.label(:mood_neutral, Emoji.find_by_alias("neutral_face").raw) %>
 
-    <%= f.radio_button(:mood, "sad") %>
-    <%= f.label(:mood_sad, "I am sad") %>
+    <%= f.radio_button(:mood, "sad", required: "required") %>
+    <%= f.label(:mood_sad, Emoji.find_by_alias("sob").raw) %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-success btn-lg" %>
   </div>
 <% end %>

@@ -1,4 +1,16 @@
-<p>You have had <%= @love.count %> love days</p>
-<p>You have had <%= @happy.count %> happy days</p>
-<p>You have had <%= @neutral.count %> neutral days</p>
-<p>You have had <%= @sad.count %> sad days</p>
+<section class="stats text-center">
+  <h1>Your mood stats</h1>
+
+  <p>
+    You have had <%= @love.count %> <%= Emoji.find_by_alias("heart_eyes").raw %> days
+  </p>
+  <p>
+    You have had <%= @happy.count %> <%= Emoji.find_by_alias("smile").raw %> days
+  </p>
+  <p>
+    You have had <%= @neutral.count %> <%= Emoji.find_by_alias("neutral_face").raw %> days
+  </p>
+  <p>
+    You have had <%= @sad.count %> <%= Emoji.find_by_alias("sob").raw %> days
+  </p>
+<section>
