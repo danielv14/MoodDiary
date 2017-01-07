@@ -12,8 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :mood %>
-    <%= f.text_field :mood %>
+    <%= f.radio_button(:mood, "love") %>
+    <%= f.label(:mood_love, "I can feel the love today") %>
+
+    <%= f.radio_button(:mood, "happy") %>
+    <%= f.label(:mood_happy, "I am happy") %>
+
+    <%= f.radio_button(:mood, "neutral") %>
+    <%= f.label(:mood_happy, "I am neutral today") %>
+
+    <%= f.radio_button(:mood, "sad") %>
+    <%= f.label(:mood_sad, "I am sad") %>
   </div>
 
   <div class="field">
