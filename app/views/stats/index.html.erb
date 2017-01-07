@@ -2,15 +2,23 @@
   <h1>Your mood stats</h1>
 
   <p>
-    You have had <%= @love.count %> <%= Emoji.find_by_alias("heart_eyes").raw %> days
+    You've had <%= @love.count %>
+    <%= Emoji.find_by_alias("heart_eyes").raw %>
+    <%= 'day'.pluralize(@love.count) %>
   </p>
   <p>
-    You have had <%= @happy.count %> <%= Emoji.find_by_alias("smile").raw %> days
+    You've had <%= @happy.count %>
+    <%= Emoji.find_by_alias("smile").raw %>
+    <%= 'day'.pluralize(@happy.count) %>
   </p>
   <p>
-    You have had <%= @neutral.count %> <%= Emoji.find_by_alias("neutral_face").raw %> days
+    You've had <%= @neutral.count %>
+    <%= Emoji.find_by_alias("neutral_face").raw %>
+    <%= 'day'.pluralize(@neutral.count) %>
   </p>
   <p>
-    You have had <%= @sad.count %> <%= Emoji.find_by_alias("sob").raw %> days
+    You've had <%= @sad.count %>
+    <%= Emoji.find_by_alias("sob").raw %>
+    <%= 'day'.pluralize(@sad.count) %>
   </p>
 <section>

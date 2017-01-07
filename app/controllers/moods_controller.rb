@@ -1,6 +1,7 @@
 class MoodsController < ApplicationController
   before_action :set_mood, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  before_action :once_per_day, only: [:create, :new]
 
 
   # GET /moods
@@ -67,6 +68,15 @@ class MoodsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_mood
       @mood = current_user.moods.find(params[:id])
+    end
+
+    # only let user create a mood entry once a day
+    def once_per_day
+      if current_user.moods.today.count >= 1
+        respond_to do |format|
+          format.html { redirect_to quota_url }
+        end
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
