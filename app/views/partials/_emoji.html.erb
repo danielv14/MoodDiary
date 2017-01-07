@@ -1,0 +1,9 @@
+<% if @mood.mood == 'love' %>
+  <%= Emoji.find_by_alias("heart_eyes").raw %>
+<% elsif @mood.mood == 'happy' %>
+  <%= Emoji.find_by_alias("smile").raw %>
+<% elsif @mood.mood == 'neutral' %>
+  <%= Emoji.find_by_alias("neutral_face").raw %>
+<% else %>
+  <%= Emoji.find_by_alias("sob").raw %>
+<% end %>

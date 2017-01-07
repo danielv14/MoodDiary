@@ -1,5 +1,18 @@
 <section class="text-center quota">
-  <h1>Quota reached</h1>
-  <p>You have already created a mood entry for today.</p>
-  <p>Pleace come back tomorrow to update your mood!</p>
+  <h1>Mood already set</h1>
+  <p>
+    You have already created a mood entry for today.
+    <br>
+    Pleace come back tomorrow to update your mood!
+  </p>
+
+  <hr>
+
+  <p>
+    Current mood for today is
+    <%= render "partials/emoji" %>
+  </p>
+
+  <%= link_to 'Update mood', edit_mood_path(@mood), class: 'btn btn-default btn-lg' %>
+
 </section>

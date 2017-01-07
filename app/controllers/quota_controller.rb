@@ -1,6 +1,7 @@
 class QuotaController < ApplicationController
   before_action :posted_yet
   def index
+    @mood = current_user.moods.today.take
   end
 
   private

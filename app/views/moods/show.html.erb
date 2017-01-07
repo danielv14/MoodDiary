@@ -1,15 +1,9 @@
 <div class="text-center">
 
-  <h1>Todays mood</h1>
-  <% if @mood.mood == 'love' %>
-    <p class="emoji"> <%= Emoji.find_by_alias("heart_eyes").raw %> </p>
-  <% elsif @mood.mood == 'happy' %>
-    <p class="emoji"> <%= Emoji.find_by_alias("smile").raw %> </p>
-  <% elsif @mood.mood == 'neutral' %>
-    <p class="emoji"> <%= Emoji.find_by_alias("neutral_face").raw %> </p>
-  <% else %>
-    <p class="emoji"> <%= Emoji.find_by_alias("sob").raw %> </p>
-  <% end %>
+  <h1>Today's mood</h1>
+  <p class="emoji">
+    <%= render "partials/emoji" %>
+  </p>
 
 
   <%= link_to 'Edit', edit_mood_path(@mood), class: 'btn btn-primary btn-lg' %>
