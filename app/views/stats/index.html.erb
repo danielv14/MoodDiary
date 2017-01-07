@@ -1,8 +1,11 @@
 <section class="stats text-center">
   <h1>Your mood stats</h1>
-  <h4>
-    Since <%= @first.created_at.strftime("%B %Y") %> when you started tracking your moods
-  </h4>
+  <% if @first %>
+    <h4>
+      Since <%= @first.created_at.strftime("%B %Y") %> when you started tracking your moods
+    </h4>
+  <% end %>
+
   <hr>
   <h4>You've had...</h4>
   <p>
