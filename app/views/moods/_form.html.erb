@@ -11,18 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field mood-radios">
-    <%= f.radio_button(:mood, "love", required: "required", class: "radio-btn") %>
-    <%= f.label(:mood_love, Emoji.find_by_alias("heart_eyes").raw) %>
+  <div class="field mood-radios row">
+    <div class="col s6">
+      <%= f.radio_button(:mood, "love", required: "required", class: "radio-btn") %>
+      <%= f.label(:mood_love, Emoji.find_by_alias("heart_eyes").raw) %>
+    </div>
+    <div class="col s6">
+      <%= f.radio_button(:mood, "happy", required: "required", class: "radio-btn") %>
+      <%= f.label(:mood_happy, Emoji.find_by_alias("smile").raw) %>
+    </div>
+    <div class="col s6">
+      <%= f.radio_button(:mood, "neutral", required: "required", class: "radio-btn") %>
+      <%= f.label(:mood_neutral, Emoji.find_by_alias("neutral_face").raw) %>
+    </div>
+    <div class="col s6">
+      <%= f.radio_button(:mood, "sad", required: "required", class: "radio-btn") %>
+      <%= f.label(:mood_sad, Emoji.find_by_alias("sob").raw) %>
+    </div>
 
-    <%= f.radio_button(:mood, "happy", required: "required", class: "radio-btn") %>
-    <%= f.label(:mood_happy, Emoji.find_by_alias("smile").raw) %>
-
-    <%= f.radio_button(:mood, "neutral", required: "required", class: "radio-btn") %>
-    <%= f.label(:mood_neutral, Emoji.find_by_alias("neutral_face").raw) %>
-
-    <%= f.radio_button(:mood, "sad", required: "required", class: "radio-btn") %>
-    <%= f.label(:mood_sad, Emoji.find_by_alias("sob").raw) %>
   </div>
 
   <br>
